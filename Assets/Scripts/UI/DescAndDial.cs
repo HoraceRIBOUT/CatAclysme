@@ -18,6 +18,10 @@ public class DescAndDial : MonoBehaviour {
 
     public void Description(Step giveStep)
     {
+        gameObject.SetActive(true);
+        textDesc.gameObject.SetActive(true);
+        nameTalker.gameObject.SetActive(false);
+        portrait.gameObject.SetActive(false);
         nameTalker.text = "";
         textDesc.text = giveStep.grid[1, giveStep.y];
         portrait.sprite = null;
@@ -25,6 +29,10 @@ public class DescAndDial : MonoBehaviour {
 
     public void Dialogue(Step giveStep, Sprite imagePortrait)
     {
+        gameObject.SetActive(true);
+        textDesc.gameObject.SetActive(true);
+        nameTalker.gameObject.SetActive(true);
+        portrait.gameObject.SetActive(true);
         nameTalker.text = giveStep.grid[1, giveStep.y];
         textDesc.text = giveStep.grid[2, giveStep.y];
         portrait.sprite = imagePortrait;
@@ -32,6 +40,9 @@ public class DescAndDial : MonoBehaviour {
 
     public void Finish()
     {
-
+        gameObject.SetActive(false);
+        textDesc.gameObject.SetActive(false);
+        nameTalker.gameObject.SetActive(false);
+        portrait.gameObject.SetActive(false);
     }
 }

@@ -1,0 +1,15 @@
+Desc	Salut Huguette				-firstLine-
+Desc	Comment va tu ?				
+Desc	Turlututu, chapeau ...?				
+Dial	Huguette	Dans ton cul ?	1	L	
+Anim	L	Dodge			
+Brui	Scratch	TRUE			
+Brui	Take	FALSE			
+Musi	Suspens				
+Sall	Ruelle				
+Path					
+Cond					
+Valu					
+Zone	Rideau	FALSE			
+Intr	Rideau	Griffer	FALSE		
+Intr	Coffre	Ouvrir	TRUE		

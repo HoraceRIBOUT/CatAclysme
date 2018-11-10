@@ -10,9 +10,8 @@ public class UI_Holder : MonoBehaviour {
     //Popup part
     public PopUp currentPopUp;
     public GameObject popUpPrefab;
-
-
-
+    
+    //Reserve
     public List<Sprite> portraits;
 
 	// Use this for initialization
@@ -23,6 +22,7 @@ public class UI_Holder : MonoBehaviour {
 
     public void Finish()
     {
+        print("Yep, ça passe chez moi");
         choiceH.Finish();
         desc.Finish();
 
@@ -43,6 +43,11 @@ public class UI_Holder : MonoBehaviour {
         choiceH.AddChoice(givenStep);
         //verifier si dernier ou non
         return true;
+    }
+
+    public void LaunchChoice()
+    {
+        choiceH.LaunchChoice();
     }
 
 }

@@ -1,0 +1,5 @@
+Desc	Salut Huguette				-firstLine-
+Desc	Comment va tu ?				
+Desc	Turlututu, chapeau ...?				
+Dial	Huguette	Dans ton cul ?	1	L	
+Desc	... Humour de prog ?			Dial	Huguette	Non, j'aime juste te faire chier ! :D	1	L				

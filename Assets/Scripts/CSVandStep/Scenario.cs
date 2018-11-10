@@ -14,10 +14,14 @@ public class Scenario : MonoBehaviour {
 
     [Header("CSV reading")]
     public bool readingCSV = false;
+    public bool waitingForClick = false;
+
     public string pathOfNextCSV = "";
     public TextAsset nextCSVToRead;
     public List<Step> currentCSV = new List<Step>();
     public int currentPos = 0;
+
+    
 
 
 
@@ -31,7 +35,13 @@ public class Scenario : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (waitingForClick)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                displayNextStep();
+            }
+        }
 	}
 
     private void TreatCSV()
@@ -66,7 +76,7 @@ public class Scenario : MonoBehaviour {
     private void displayNextStep()
     {
         currentPos++;
-        if (currentPos > currentCSV.Count)
+        if (currentPos >= currentCSV.Count)
         {
             EndCSVreading();
             return;
@@ -130,6 +140,7 @@ public class Scenario : MonoBehaviour {
     public void EndCSVreading()
     {
         readingCSV = false;
+        print("Reçu ? Reçu ? Reçu ?!");
         GameManager.Instance.ui_holder.Finish();
     }
 
@@ -138,28 +149,30 @@ public class Scenario : MonoBehaviour {
     private void DisplayDescription(Step giveStep)
     {
         GameManager.Instance.ui_holder.Description(giveStep);
+        waitingForClick = true;
     }
 
     private void DisplayDialogue(Step giveStep)
     {
         GameManager.Instance.ui_holder.Dialogue(giveStep);
+        waitingForClick = true;
     }
 
     private void DisplayChoice(Step giveStep)
     {
-        bool lastOne = GameManager.Instance.ui_holder.AddChoice(giveStep);
-        if (lastOne)
+        if(currentPos == currentCSV.Count)
         {
-            LaunchChoice();
+            GameManager.Instance.ui_holder.LaunchChoice();
         }
         else
         {
             displayNextStep();
         }
     }
-    private void LaunchChoice()
+
+    public void ChoosenChoice(string returningValue)
     {
-        //coroutine ?
+
     }
 
 
