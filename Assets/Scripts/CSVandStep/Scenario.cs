@@ -18,7 +18,7 @@ public class Scenario : MonoBehaviour {
 
     public string pathOfNextCSV = "";
     public TextAsset nextCSVToRead;
-    public List<Step> currentCSV = new List<Step>();
+    public List<Step> currentStepList = new List<Step>();
     public int currentPos = 0;
 
     
@@ -28,15 +28,19 @@ public class Scenario : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if(pathOfNextCSV == "")
-            pathOfNextCSV = startFile;
-        TreatCSV();
+        if (!GameManager.Instance._FEBUG_dont_start_with_startCVS)
+        {
+            if(pathOfNextCSV == "")
+                pathOfNextCSV = startFile;
+            TreatCSV();
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (waitingForClick)
         {
+            waitingForClick = false;
             if (Input.GetMouseButtonDown(0))
             {
                 displayNextStep();
@@ -47,7 +51,7 @@ public class Scenario : MonoBehaviour {
     private void TreatCSV()
     {
         currentPos = -1;
-        currentCSV.Clear();
+        currentStepList.Clear();
         /*choiceWaiting.Clear();
         choiceOnScreen = false;
         imageHolder.GoBack();
@@ -66,8 +70,9 @@ public class Scenario : MonoBehaviour {
         Step bufferStep = null;
         for (uint y = 0; y < grid.GetUpperBound(1); y++)
         {
+            Debug.Log("y ?" + y);
             bufferStep = new Step(grid, y);
-            currentCSV.Add(bufferStep);
+            currentStepList.Add(bufferStep);
         }
         readingCSV = true;
         displayNextStep();
@@ -76,16 +81,16 @@ public class Scenario : MonoBehaviour {
     private void displayNextStep()
     {
         currentPos++;
-        if (currentPos >= currentCSV.Count)
+        if (currentPos >= currentStepList.Count)
         {
             EndCSVreading();
             return;
         }
 
-        Step currentStep = currentCSV[currentPos];
+        Step currentStep = currentStepList[currentPos];
         Utils.StepType typeToTreat = currentStep.type;
         print("Pos " + currentPos + 
-              " listSize = " + currentCSV.Count + 
+              " listSize = " + currentStepList.Count + 
               " name ? " + typeToTreat.ToString());
 
         //THE BIG SWITCH !!!
@@ -160,7 +165,7 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayChoice(Step giveStep)
     {
-        if(currentPos == currentCSV.Count)
+        if(currentPos == currentStepList.Count)
         {
             GameManager.Instance.ui_holder.LaunchChoice();
         }
@@ -170,7 +175,7 @@ public class Scenario : MonoBehaviour {
         }
     }
 
-    public void ChoosenChoice(string returningValue)
+    public void ExecutePath(string returningValue)
     {
         pathOfNextCSV = returningValue;
         TreatCSV();

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance = null;
+    public bool _FEBUG_dont_start_with_startCVS = false;
 
     private void Awake()
     {

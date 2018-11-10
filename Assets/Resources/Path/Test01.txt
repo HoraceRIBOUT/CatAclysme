@@ -6,10 +6,9 @@ Anim	L	Dodge
 Brui	Scratch	TRUE			
 Brui	Take	FALSE			
 Musi	Suspens				
-Sall	Ruelle				
-Path					
+Sall	Ruelle	
 Cond					
 Valu					
 Zone	Rideau	FALSE			
 Intr	Rideau	Griffer	FALSE		
-Intr	Coffre	Ouvrir	TRUE		
+Intr	Coffre	Ouvrir	TRUE	

@@ -1,11 +1,19 @@
-Dial	Huguette	Dans ton cul ?	1	L
-Anim				
+Dial	Berserkate	Ce test marche	1	L	-firstLine-	
+musi	Auberge
+Desc	Kally mange				
 Brui				
-musi				
+Desc	iMerge merge	
+Anim		
+Desc	JusDeFruit juge	
 sall				
+Desc	Darius dab rius	
 deco				
-next				
+Desc	Panda me né-zik
 cond				
+Desc	Horace dino-te
 valu				
+Desc	Et le groupe chatonne	
 zone				
-intr				
+Desc	Et nous chatonne encore ! 	
+intr	
+Desc	Succes !!!

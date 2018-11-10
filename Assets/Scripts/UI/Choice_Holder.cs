@@ -38,7 +38,7 @@ public class Choice_Holder : MonoBehaviour {
 
     public void ChoosenChoice(int clickedIndex)
     {
-        GameManager.Instance.scenario.ChoosenChoice(csv[clickedIndex]);
+        GameManager.Instance.scenario.ExecutePath(csv[clickedIndex]);
         for (int index = 0; index < choiceCount; index++ )
         {
             choice[index].transform.parent.gameObject.SetActive(false);
