@@ -1,0 +1,11 @@
+Dial	Huguette	Dans ton cul ?	1	L
+Anim				
+Brui				
+musi				
+sall				
+deco				
+path				
+cond				
+valu				
+zone				
+intr				
