@@ -50,7 +50,7 @@ public class Utils : MonoBehaviour {
             case ("deco"):
                 res = StepType.Decor;
                 break;
-            case ("path"):
+            case ("next"):
                 res = StepType.Next;
                 break;
             case ("cond"):

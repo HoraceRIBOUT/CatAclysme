@@ -172,7 +172,14 @@ public class Scenario : MonoBehaviour {
 
     public void ChoosenChoice(string returningValue)
     {
+        pathOfNextCSV = returningValue;
+        TreatCSV();
+    }
 
+    private void DisplayNext(Step giveStep)
+    {
+        pathOfNextCSV = giveStep.get(1);
+        TreatCSV();
     }
 
 
@@ -197,11 +204,6 @@ public class Scenario : MonoBehaviour {
     }
 
     private void DisplayDecor(Step giveStep)
-    {
-
-    }
-
-    private void DisplayNext(Step giveStep)
     {
 
     }

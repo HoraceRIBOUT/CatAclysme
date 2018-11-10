@@ -4,7 +4,7 @@ Brui
 musi				
 sall				
 deco				
-path				
+next				
 cond				
 valu				
 zone				
