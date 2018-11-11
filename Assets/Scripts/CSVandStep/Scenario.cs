@@ -204,7 +204,8 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayMusique(Step giveStep)
     {
-
+        int indexOfMusique = (int)Utils.stringToMusiqueName(giveStep.get(1));
+        GameManager.Instance.sonMaster.ChangeMusique(indexOfMusique);
         displayNextStep();
     }
 

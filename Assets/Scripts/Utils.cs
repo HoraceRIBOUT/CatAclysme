@@ -72,4 +72,29 @@ public class Utils : MonoBehaviour {
         }
         return res;
     } 
+
+    public enum MusiqueName
+    {
+        Suspens,
+        Auberge,
+
+    }
+
+    public static MusiqueName stringToMusiqueName (string s)
+    {
+        return (MusiqueName)System.Enum.Parse(typeof(MusiqueName), s);
+    }
+
+    public enum BruitageName
+    {
+        Marche,
+
+    }
+
+    public static BruitageName stringToBruitageName(string s)
+    {
+        return (BruitageName)System.Enum.Parse(typeof(BruitageName), s);
+    }
+
+
 }

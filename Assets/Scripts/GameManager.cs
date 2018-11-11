@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     public CSV_Reader csv_reader;
     public UI_Holder ui_holder;
     public Scenario scenario;
-
+    public SonMaster sonMaster;
 
     
     
