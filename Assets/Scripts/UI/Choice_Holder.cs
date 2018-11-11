@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Choice_Holder : MonoBehaviour {
 
     private Text[] choice = new Text[4];
-    private string[] csv = new string[4];
+    private EnumUtils.textAvailable[] csv = new EnumUtils.textAvailable[4];
     private int choiceCount = 0;
 
 
@@ -19,7 +19,7 @@ public class Choice_Holder : MonoBehaviour {
     {
        if(choiceCount != 4)
        {
-            csv[choiceCount] = givenStep.get(2);
+            csv[choiceCount] = EnumUtils.ChangeToEnum(givenStep.get(2));
             choice[choiceCount].text = givenStep.get(1);
             choice[choiceCount].transform.parent.gameObject.SetActive(true);
             choiceCount++;
@@ -42,7 +42,7 @@ public class Choice_Holder : MonoBehaviour {
         for (int index = 0; index < choiceCount; index++ )
         {
             choice[index].transform.parent.gameObject.SetActive(false);
-            csv[index] = "";
+            csv[index] = (EnumUtils.textAvailable)0;
         }
         choiceCount = 0;
     }

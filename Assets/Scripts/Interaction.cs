@@ -7,7 +7,7 @@ public class Interaction {
 
     public string id;
     public bool item;
-    public string pathToFollow;
+    public EnumUtils.textAvailable pathToFollow;
 
     public bool active = true;
 }

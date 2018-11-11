@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scenario : MonoBehaviour {
 
 
-    public string startFile;
+    public EnumUtils.textAvailable startFile;
 
     [Header("RoomMode")]
     public List<Room> rooms = new List<Room>();
@@ -17,7 +17,7 @@ public class Scenario : MonoBehaviour {
     public bool readingCSV = false;
     public bool waitingForClick = false;
 
-    public string pathOfNextCSV = "";
+    public EnumUtils.textAvailable pathOfNextCSV;
     public TextAsset nextCSVToRead;
     public List<Step> currentStepList = new List<Step>();
     public int currentPos = 0;
@@ -32,7 +32,7 @@ public class Scenario : MonoBehaviour {
     void Start () {
         if (!GameManager.Instance._FEBUG_dont_start_with_startCVS)
         {
-            if(pathOfNextCSV == "")
+            if((int)pathOfNextCSV == 0)
                 pathOfNextCSV = startFile;
             TreatCSV();
         }
@@ -177,7 +177,7 @@ public class Scenario : MonoBehaviour {
         }
     }
 
-    public void ExecutePath(string returningValue)
+    public void ExecutePath(EnumUtils.textAvailable returningValue)
     {
         pathOfNextCSV = returningValue;
         TreatCSV();
@@ -185,7 +185,7 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayNext(Step giveStep)
     {
-        pathOfNextCSV = giveStep.get(1);
+        pathOfNextCSV = EnumUtils.ChangeToEnum(giveStep.get(1));
         TreatCSV();
     }
 
@@ -223,7 +223,12 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayValeur(Step giveStep)
     {
-        dicoBool.Add(giveStep.get(1), giveStep.get(2) == "TRUE");
+        string value = giveStep.get(1);
+        bool key = giveStep.get(2) == "TRUE";
+        if (dicoBool.ContainsKey(value))
+            dicoBool[value] = key;
+        else
+            dicoBool.Add(value, key);
         displayNextStep();
     }
 
@@ -234,11 +239,11 @@ public class Scenario : MonoBehaviour {
         /*res = */dicoBool.TryGetValue(index, out res);
         if (res)
         {
-            ExecutePath(giveStep.get(2));
+            ExecutePath(EnumUtils.ChangeToEnum(giveStep.get(2)));
         }
         else
         {
-            ExecutePath(giveStep.get(3));
+            ExecutePath(EnumUtils.ChangeToEnum(giveStep.get(3)));
         }
     }
 

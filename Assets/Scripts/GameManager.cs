@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance = null;
     public bool _FEBUG_dont_start_with_startCVS = false;
+    public List<string> pretexts = new List<string>();
 
     private void Awake()
     {
@@ -31,6 +32,8 @@ public class GameManager : MonoBehaviour {
             ui_holder = this.GetComponent<UI_Holder>();//oula nope
         if (scenario == null)
             scenario = this.GetComponent<Scenario>();
+        if (sonMaster == null)
+            sonMaster = this.GetComponent<SonMaster>();
     }
 
 

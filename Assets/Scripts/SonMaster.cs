@@ -14,7 +14,8 @@ public class SonMaster : MonoBehaviour {
         if(musiques[i] != currentMusique)
         {
             //launch co routine pour diminuer volume
-            StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp, 0));
+            if (currentMusique != null) 
+                StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp, 0));
             currentMusique = musiques[i];
             StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 1));
         }

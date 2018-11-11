@@ -1,0 +1,5 @@
+﻿Desc	Vous enfoncez votre main dans l'océan de poil de chat qu'est ce grattoir				-firstLine-
+Desc	Griffe, croquettes, plume de nos ennemies...				
+Desc	Mais aucun indice.	
+Intr	Rideau	Griffer	FALSE		
+Intr	Coffre	Ouvrir	TRUE	
