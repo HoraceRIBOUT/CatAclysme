@@ -15,6 +15,11 @@ public class Zone : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        GameManager.Instance.ui_holder.OpenPopUp(Input.mousePosition, interactions);
+        if (GameManager.Instance.scenario.currentZone != this && !GameManager.Instance.scenario.readingCSV)
+        {
+            GameManager.Instance.scenario.currentZone = this;
+            GameManager.Instance.ui_holder.OpenPopUp(Input.mousePosition, interactions);
+        }
+
     }
 }

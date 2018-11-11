@@ -9,6 +9,7 @@ public class Scenario : MonoBehaviour {
 
     [Header("RoomMode")]
     public List<Room> rooms = new List<Room>();
+    public Zone currentZone = null;
     //Instanciate each one, by vague probably, or at start
 
 

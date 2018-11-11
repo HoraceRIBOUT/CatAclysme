@@ -9,6 +9,8 @@ public class PopUp : MonoBehaviour {
 
     public Transform parentTiquette; 
     public GameObject etiquette;
+    RectTransform rectParent;
+    RectTransform rectThis;
     
     // Use this for initialization
     void Start () {
@@ -16,23 +18,41 @@ public class PopUp : MonoBehaviour {
 
     public void init(Vector2 position, List<Interaction> interactions, float pixelSize, float fontSize)
     {
-        int size = interactions.Count;
+        //Clean
+        CleanEtiquettes();
 
         GameObject gO;
         Tiquette tiquette;
-        RectTransform rectT = parentTiquette.GetComponent<RectTransform>();
-        rectT.sizeDelta = new Vector2(rectT.sizeDelta.x, pixelSize * size);
-        rectT = this.GetComponent<RectTransform>();
-        rectT.position = position;
+        int size = interactions.Count;
 
+        if(rectThis == null || rectParent == null)
+        {
+            rectParent = parentTiquette.GetComponent<RectTransform>();
+            rectThis = this.GetComponent<RectTransform>();
+        }
 
+        //Own size
+        rectParent.sizeDelta = new Vector2(rectParent.sizeDelta.x, pixelSize * size);
+        rectThis.position = position;
+
+        /*Creation tiquette*/
+        if (etiquettes.Count < size)
+        {
+            for (int i = etiquettes.Count; i < size; i++)
+            {
+                gO = Instantiate(etiquette, parentTiquette);
+                tiquette = gO.GetComponent<Tiquette>();
+                etiquettes.Add(tiquette);
+            }
+        }
+
+        //Set tiquette to value
         for (int i = 0; i < size; i++)
         {
-            gO = Instantiate(etiquette, parentTiquette);
-            tiquette = gO.GetComponent<Tiquette>();
+            tiquette = etiquettes[i];
             int value = i;
             tiquette.init(pixelSize, i, (int)fontSize, delegate { ClickOn(value); }, interactions[i]);
-            etiquettes.Add(tiquette);
+            tiquette.gameObject.SetActive(true);
         }
     }
 
@@ -40,11 +60,28 @@ public class PopUp : MonoBehaviour {
     void ClickOn(int indexHere)
     {
         GameManager.Instance.scenario.ExecutePath(etiquettes[indexHere].inter.pathToFollow);
-        
+        ClosePopUp();
     }
-    
+
+    public void ClosePopUp()
+    {
+        CleanEtiquettes();
+        rectParent.sizeDelta = new Vector2(rectParent.sizeDelta.x, 0);
+        print("Lol ça close mais 0, c'est pas assez lol");
+
+        GameManager.Instance.scenario.currentZone = null;
+    }
+
+    public void CleanEtiquettes()
+    {
+        foreach (Tiquette ti in etiquettes)
+        {
+            ti.gameObject.SetActive(false);
+        }
+    }
 
 
 
-	
+
+
 }
