@@ -617,6 +617,7 @@ MonoBehaviour:
     type: 2}
   pixelSize: 0
   fontSize: 0
+  halfSize: {x: 0, y: 0}
   portraits:
   - {fileID: 21300000, guid: ca6d178c6ba14a14ca3c3e8ee90f676e, type: 3}
   - {fileID: 21300000, guid: e23e40cdeb5fe3149b1fb83b4e7cd7a9, type: 3}
@@ -1120,7 +1121,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579882730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.08, y: -1.03, z: 0}
+  m_LocalPosition: {x: 3.72, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1874422536}
@@ -1150,8 +1151,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.6329701, y: 2.0127528}
-      - {x: -1.3941357, y: 1.6382551}
+    - - {x: -0.5296397, y: 1.7544272}
+      - {x: -1.256362, y: 1.397151}
       - {x: -0.04976082, y: -0.9039626}
       - {x: 0.46119118, y: -0.96725965}
       - {x: 0.6029229, y: -0.45054698}

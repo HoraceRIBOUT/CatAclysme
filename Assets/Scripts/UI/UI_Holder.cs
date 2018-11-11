@@ -12,6 +12,8 @@ public class UI_Holder : MonoBehaviour {
     public GameObject popUpPrefab;
     public float pixelSize;
     public float fontSize;
+    public Vector2 halfSize;
+    private List<Interaction> interactionActive = new List<Interaction>();
 
     //Reserve
     public List<Sprite> portraits;
@@ -20,6 +22,7 @@ public class UI_Holder : MonoBehaviour {
 	void Start () {
         pixelSize = Screen.height / 20;
         fontSize = pixelSize * 0.75f;   //for spacing 
+        halfSize = Vector2.up * Screen.height / 2 + Vector2.right * Screen.width / 2;
     }
 	
 
@@ -59,7 +62,15 @@ public class UI_Holder : MonoBehaviour {
         if (currentPopUp == null)
             currentPopUp = Instantiate(popUpPrefab,this.transform).GetComponent<PopUp>();
 
-        currentPopUp.init(position, interactions, pixelSize, fontSize);
+        interactionActive.Clear();
+        foreach (Interaction inter in interactions)
+        {
+            if (inter.active)
+                ///if( inter.item && GameManager.Instance.scenario.inventaire.Contains()*/
+                interactionActive.Add(inter);
+        }
+
+        currentPopUp.init(position, interactionActive, pixelSize, fontSize, halfSize);
     }
 
 

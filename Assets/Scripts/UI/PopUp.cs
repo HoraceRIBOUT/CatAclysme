@@ -16,7 +16,7 @@ public class PopUp : MonoBehaviour {
     void Start () {
     }
 
-    public void init(Vector2 position, List<Interaction> interactions, float pixelSize, float fontSize)
+    public void init(Vector2 position, List<Interaction> interactions, float pixelSize, float fontSize, Vector2 halfSize)
     {
         //Clean
         CleanEtiquettes();
@@ -24,8 +24,13 @@ public class PopUp : MonoBehaviour {
         GameObject gO;
         Tiquette tiquette;
         int size = interactions.Count;
+        Vector2 scaleRot = Vector2.one;
+        if(position.x > halfSize.x)
+            scaleRot += Vector2.left * 2;
+        if (position.y < halfSize.y)
+            scaleRot += Vector2.down * 2;
 
-        if(rectThis == null || rectParent == null)
+        if (rectThis == null || rectParent == null)
         {
             rectParent = parentTiquette.GetComponent<RectTransform>();
             rectThis = this.GetComponent<RectTransform>();
@@ -33,6 +38,7 @@ public class PopUp : MonoBehaviour {
 
         //Own size
         rectParent.sizeDelta = new Vector2(rectParent.sizeDelta.x, pixelSize * size);
+        rectParent.localScale = scaleRot;
         rectThis.position = position;
 
         /*Creation tiquette*/
@@ -51,7 +57,7 @@ public class PopUp : MonoBehaviour {
         {
             tiquette = etiquettes[i];
             int value = i;
-            tiquette.init(pixelSize, i, (int)fontSize, delegate { ClickOn(value); }, interactions[i]);
+            tiquette.init(pixelSize, i, (int)fontSize, delegate { ClickOn(value); }, interactions[i], scaleRot);
             tiquette.gameObject.SetActive(true);
         }
     }

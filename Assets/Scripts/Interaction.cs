@@ -6,6 +6,8 @@ using UnityEngine;
 public class Interaction {
 
     public string id;
-    public bool verbeOuItem;
+    public bool item;
     public string pathToFollow;
+
+    public bool active = true;
 }
