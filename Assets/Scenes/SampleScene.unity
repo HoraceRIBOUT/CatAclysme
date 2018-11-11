@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 168339014}
   - component: {fileID: 168339013}
   - component: {fileID: 168339012}
+  - component: {fileID: 168339015}
   m_Layer: 0
   m_Name: Musique
   m_TagString: Untagged
@@ -355,6 +356,7 @@ MonoBehaviour:
   musiques:
   - {fileID: 168339013}
   - {fileID: 168339012}
+  - {fileID: 168339012}
   currentMusique: {fileID: 168339013}
   bruitageAS:
   - {fileID: 1797653322}
@@ -415,7 +417,116 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 9c08a5fcff22ead40b583736612a44d7, type: 3}
     - {fileID: 8300000, guid: d7f9faff1e042c44a81d2e83a50fed1b, type: 3}
     - {fileID: 8300000, guid: 78fea6866b0881242866831ece27b7bc, type: 3}
+  - id: MiaouGouttiere
+    auClip:
+    - {fileID: 8300000, guid: 8880345713b61d446b9b98e673dfc81d, type: 3}
+    - {fileID: 8300000, guid: 69626e6c2e729d7429e6635f566e3d81, type: 3}
+    - {fileID: 8300000, guid: bbb404892f00ab447b783c16e40a325b, type: 3}
+    - {fileID: 8300000, guid: 4f588081c7f50eb45b5c5789b7668abe, type: 3}
+    - {fileID: 8300000, guid: 193ac502a2b97f94a941a8b00454be86, type: 3}
+  - id: MiaouHero
+    auClip:
+    - {fileID: 8300000, guid: 66304b4bccbc6d549a03b327559e4540, type: 3}
+    - {fileID: 8300000, guid: 19f79f64ee684584cabcf9764971ab89, type: 3}
+    - {fileID: 8300000, guid: 699389121771661479cf4fad654562ff, type: 3}
+    - {fileID: 8300000, guid: 01a7ba7bdc247ee46a26634afe37efb3, type: 3}
+    - {fileID: 8300000, guid: 9d842b62186df3d4da25fbff31cc78d1, type: 3}
   speedDownUp: 5
+--- !u!82 &168339015
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168339010}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ef46c17306c482045aaadc978681cbba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 226
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &375507095 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114154290508720398, guid: ef999ef710b8a8c49a119b4c6135ca59,
@@ -966,7 +1077,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 759f12ad39c0d23429392189772ad864, type: 3}
   - {fileID: 21300000, guid: e59b39e7759c4664f885cf8ba747a671, type: 3}
   - {fileID: 21300000, guid: 8398b1d7f08a60445a2efc0f3e22ce57, type: 3}
-  - {fileID: 21300000, guid: e23e40cdeb5fe3149b1fb83b4e7cd7a9, type: 3}
+  - {fileID: 21300000, guid: ca29d4e26790a104fba132483ee87664, type: 3}
+  - {fileID: 21300000, guid: b5facbef9fd965f419968b36586c3fcd, type: 3}
 --- !u!114 &760107023
 MonoBehaviour:
   m_ObjectHideFlags: 0

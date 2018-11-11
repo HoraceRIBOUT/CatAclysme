@@ -84,7 +84,7 @@ public class Utils : MonoBehaviour {
     {
         Suspens,
         Auberge,
-
+        Auberge_Filtre,
     }
 
     public static MusiqueName stringToMusiqueName (string s)
@@ -102,6 +102,9 @@ public class Utils : MonoBehaviour {
         MiaouLadi,
         MiaouBers,
         MaiouMalo,
+        MiaouGout,
+        MiaouHero,
+
     }
 
     public static BruitageName stringToBruitageName(string s)
