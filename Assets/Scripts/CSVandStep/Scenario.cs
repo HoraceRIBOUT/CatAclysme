@@ -30,9 +30,15 @@ public class Scenario : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+       
+    }
+
+    public void EndOfIntro()
+    {
+        GameManager.Instance.sonMaster.ChangeMusique((int)Utils.MusiqueName.Auberge, 1.5f);
         if (!GameManager.Instance._FEBUG_dont_start_with_startCVS)
         {
-            if((int)pathOfNextCSV == 0)
+            if ((int)pathOfNextCSV == 0)
                 pathOfNextCSV = startFile;
             TreatCSV();
         }
@@ -137,6 +143,12 @@ public class Scenario : MonoBehaviour {
             case (Utils.StepType.ChangeInteraction):
                 DisplayInteraction(currentStep);
                 break;
+            case (Utils.StepType.AddItem):
+                DisplayAddItem(currentStep);
+                break;
+            case (Utils.StepType.RemoveItem):
+                DisplayRemoveItem(currentStep);
+                break;
             default:
                 Debug.LogError("CustomError : Can't treat this type : " + typeToTreat.ToString());
                 break;
@@ -205,7 +217,12 @@ public class Scenario : MonoBehaviour {
     private void DisplayMusique(Step giveStep)
     {
         int indexOfMusique = (int)Utils.stringToMusiqueName(giveStep.get(1));
-        GameManager.Instance.sonMaster.ChangeMusique(indexOfMusique);
+        float delay;
+        if( !float.TryParse(giveStep.get(2), out delay))
+        {
+            delay = 1.5f;
+        }
+        GameManager.Instance.sonMaster.ChangeMusique(indexOfMusique, delay);
         displayNextStep();
     }
 
@@ -257,6 +274,17 @@ public class Scenario : MonoBehaviour {
     {
         //.???
         displayNextStep();
+    }
+
+
+    private void DisplayAddItem(Step giveStep)
+    {
+
+    }
+
+    private void DisplayRemoveItem(Step giveStep)
+    {
+
     }
 
 

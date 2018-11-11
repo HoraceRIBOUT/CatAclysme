@@ -75,4 +75,10 @@ public class UI_Holder : MonoBehaviour {
 
 
 
+
+
+    void EndOfIntro()
+    {
+        GameManager.Instance.scenario.EndOfIntro();
+    }
 }

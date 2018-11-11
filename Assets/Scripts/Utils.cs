@@ -18,7 +18,8 @@ public class Utils : MonoBehaviour {
         ChangeValeur,
         ChangeZone,
         ChangeInteraction,
-
+        AddItem,
+        RemoveItem,
     }
     public static StepType stringToEnum(string s)
     {
@@ -64,6 +65,12 @@ public class Utils : MonoBehaviour {
                 break;
             case ("intr"):
                 res = StepType.ChangeInteraction;
+                break;
+            case ("addi"):
+                res = StepType.AddItem;
+                break;
+            case ("remi"):
+                res = StepType.RemoveItem;
                 break;
             default :
                 res = StepType.Description;

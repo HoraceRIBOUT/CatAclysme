@@ -9,7 +9,7 @@ public class SonMaster : MonoBehaviour {
 
     public float speedDownUp = 5;
 
-    public void ChangeMusique(int i)
+    public void ChangeMusique(int i, float delay)
     {
         if(musiques[i] != currentMusique)
         {
@@ -17,7 +17,7 @@ public class SonMaster : MonoBehaviour {
             if (currentMusique != null) 
                 StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp, 0));
             currentMusique = musiques[i];
-            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 1));
+            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 1, delay));
         }
 
     }
@@ -32,9 +32,10 @@ public class SonMaster : MonoBehaviour {
         }
         aS.volume = targetVolume;
     }
-    private IEnumerator augmentatSoundMusic(AudioSource aS, float speed, float targetVolume)
+    private IEnumerator augmentatSoundMusic(AudioSource aS, float speed, float targetVolume, float delay = 0)
     {
         float volume = aS.volume;
+        yield return new WaitForSeconds(delay);
         while (volume < targetVolume)
         {
             volume += speed * Time.deltaTime;
