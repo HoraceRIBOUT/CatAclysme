@@ -10,14 +10,17 @@ public class UI_Holder : MonoBehaviour {
     //Popup part
     public PopUp currentPopUp;
     public GameObject popUpPrefab;
-    
+    public float pixelSize;
+    public float fontSize;
+
     //Reserve
     public List<Sprite> portraits;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        pixelSize = Screen.height / 20;
+        fontSize = pixelSize * 0.75f;   //for spacing 
+    }
 	
 
     public void Finish()
@@ -49,5 +52,16 @@ public class UI_Holder : MonoBehaviour {
     {
         choiceH.LaunchChoice();
     }
+
+
+    public void OpenPopUp(Vector2 position, List<Interaction> interactions)
+    {
+        if (currentPopUp == null)
+            currentPopUp = Instantiate(popUpPrefab,this.transform).GetComponent<PopUp>();
+
+        currentPopUp.init(position, interactions, pixelSize, fontSize);
+    }
+
+
 
 }

@@ -1,4 +1,4 @@
-Desc	Salut Huguette				-firstLine-
+﻿Desc	Salut Huguétte				-firstLine-
 Desc	Comment va tu ?				
 Desc	Turlututu, chapeau ...?				
 Dial	Huguette	Dans ton cul ?	1	L	
@@ -7,8 +7,7 @@ Brui	Scratch	TRUE
 Brui	Take	FALSE			
 Musi	Suspens				
 Sall	Ruelle	
-Cond					
-Valu					
+Valu	dino	TRUE
 Zone	Rideau	FALSE			
 Intr	Rideau	Griffer	FALSE		
 Intr	Coffre	Ouvrir	TRUE	

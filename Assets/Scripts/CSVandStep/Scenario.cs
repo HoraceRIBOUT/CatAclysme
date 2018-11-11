@@ -21,7 +21,8 @@ public class Scenario : MonoBehaviour {
     public List<Step> currentStepList = new List<Step>();
     public int currentPos = 0;
 
-    
+    [Header("Progression")]
+    public Dictionary<string, bool> dicoBool = new Dictionary<string, bool>();
 
 
 
@@ -40,9 +41,9 @@ public class Scenario : MonoBehaviour {
 	void Update () {
         if (waitingForClick)
         {
-            waitingForClick = false;
             if (Input.GetMouseButtonDown(0))
             {
+                waitingForClick = false;
                 displayNextStep();
             }
         }
@@ -191,44 +192,64 @@ public class Scenario : MonoBehaviour {
     private void DisplayAnimation(Step giveStep)
     {
 
+        displayNextStep();
     }
 
     private void DisplayBruitage(Step giveStep)
     {
 
+        displayNextStep();
     }
 
     private void DisplayMusique(Step giveStep)
     {
 
+        displayNextStep();
     }
 
     private void DisplaySalle(Step giveStep)
     {
 
+        displayNextStep();
     }
 
     private void DisplayDecor(Step giveStep)
     {
 
+        displayNextStep();
+    }
+
+    private void DisplayValeur(Step giveStep)
+    {
+        dicoBool.Add(giveStep.get(1), giveStep.get(2) == "TRUE");
+        displayNextStep();
     }
 
     private void DislayCondition(Step giveStep)
     {
-
+        string index = giveStep.get(1);
+        bool res;
+        /*res = */dicoBool.TryGetValue(index, out res);
+        if (res)
+        {
+            ExecutePath(giveStep.get(2));
+        }
+        else
+        {
+            ExecutePath(giveStep.get(3));
+        }
     }
-    private void DisplayValeur(Step giveStep)
-    {
 
-    }
     private void DisplayZone(Step giveStep)
     {
-
+        //TO DO
+        displayNextStep();
     }
 
     private void DisplayInteraction(Step giveStep)
     {
-
+        //.???
+        displayNextStep();
     }
 
 

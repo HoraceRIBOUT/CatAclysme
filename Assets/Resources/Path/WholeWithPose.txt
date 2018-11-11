@@ -1,0 +1,17 @@
+﻿Dial	Berserkate	Ce test marche	1	L	-firstLine-	
+musi	Auberge
+Desc	Kally mange				
+Brui				
+Desc	iMerge merge	
+Anim		
+Desc	JusDeFruit juge	
+sall				
+Desc	Darius dab rius	
+deco				
+Desc	Panda me né-zik	
+valu	dino	TRUE					
+Desc	Horace dino-te
+zone				
+Desc	Et nous chatonne encore ! 	
+intr	
+Desc	Succes !!!

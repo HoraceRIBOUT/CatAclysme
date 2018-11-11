@@ -1,0 +1,2 @@
+﻿Desc	et ils mangerent le dino
+Desc	et vecurent malheureux car c'est pas très sympa de manger un dino

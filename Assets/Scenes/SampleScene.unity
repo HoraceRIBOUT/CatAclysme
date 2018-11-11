@@ -188,75 +188,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &259266762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 259266763}
-  - component: {fileID: 259266765}
-  - component: {fileID: 259266764}
-  m_Layer: 5
-  m_Name: BgPopUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &259266763
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 259266762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1379390362}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 623}
-  m_SizeDelta: {x: 0, y: 496}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &259266764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 259266762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 491612823251cc94cb8ec28bf2b620af, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &259266765
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 259266762}
-  m_CullTransparentMesh: 0
 --- !u!1 &484976515
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +468,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83e7438db2d2aa4a96964bb83a29c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  halo: {fileID: 0}
+  interactions:
+  - id: Attraper
+    verbeOuItem: 0
+    pathToFollow: FirstWhole
+  - id: Liberer
+    verbeOuItem: 0
+    pathToFollow: nop
+  - id: Parchemin
+    verbeOuItem: 1
+    pathToFollow: WholeWhitPose
+  - id: Pose
+    verbeOuItem: 1
+    pathToFollow: Test01
 --- !u!1 &760107021
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +515,8 @@ MonoBehaviour:
   choiceH: {fileID: 2094969686}
   desc: {fileID: 1245549592}
   currentPopUp: {fileID: 0}
-  popUpPrefab: {fileID: 0}
+  popUpPrefab: {fileID: 1080449812141636, guid: 268d8e8b7d26b754dabe5eb28d0bf712,
+    type: 2}
   portraits:
   - {fileID: 21300000, guid: ca6d178c6ba14a14ca3c3e8ee90f676e, type: 3}
   - {fileID: 21300000, guid: e23e40cdeb5fe3149b1fb83b4e7cd7a9, type: 3}
@@ -643,7 +589,6 @@ RectTransform:
   m_Children:
   - {fileID: 1245549589}
   - {fileID: 505123527}
-  - {fileID: 1379390362}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -981,70 +926,6 @@ MonoBehaviour:
   currentText: 
   currentName: 
   currentPortrait: {fileID: 0}
---- !u!1 &1379390361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1379390362}
-  - component: {fileID: 1379390363}
-  m_Layer: 5
-  m_Name: PopUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1379390362
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379390361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 259266763}
-  m_Father: {fileID: 760107026}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1379390363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1379390361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b584a6d70cb52ad4d8ec81c4d1293c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pixelSize: 0
-  fontSize: 0
-  etiquettes: []
-  parentTiquette: {fileID: 259266763}
-  etiquette: {fileID: 1227375604709052, guid: 685e2b8ce546f66468cb6d872fc698fd, type: 2}
-  interactions:
-  - id: Acheter
-    verbeOuItem: 0
-    pathToFollow: Test02
-  - id: Voler
-    verbeOuItem: 0
-    pathToFollow: Answer.txt
-  - id: Rideau
-    verbeOuItem: 1
-    pathToFollow: FirstWhole
-  - id: Sceptre
-    verbeOuItem: 1
-    pathToFollow: Test01
 --- !u!1 &1481673141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83e7438db2d2aa4a96964bb83a29c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  halo: {fileID: 0}
+  interactions: []
 --- !u!1 &1611460070
 GameObject:
   m_ObjectHideFlags: 0

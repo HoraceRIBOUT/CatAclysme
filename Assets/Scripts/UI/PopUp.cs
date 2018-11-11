@@ -4,29 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PopUp : MonoBehaviour {
-
-    public float pixelSize;
-    public float fontSize;
-
+    
     public List<Tiquette> etiquettes = new List<Tiquette>();
-
 
     public Transform parentTiquette; 
     public GameObject etiquette;
-
-
-    public List<Interaction> interactions = new List<Interaction>();
-
+    
     // Use this for initialization
     void Start () {
-        pixelSize = Screen.height / 20; 
-        fontSize = pixelSize * 0.75f;   //for spacing 
+    }
+
+    public void init(Vector2 position, List<Interaction> interactions, float pixelSize, float fontSize)
+    {
         int size = interactions.Count;
 
         GameObject gO;
         Tiquette tiquette;
         RectTransform rectT = parentTiquette.GetComponent<RectTransform>();
         rectT.sizeDelta = new Vector2(rectT.sizeDelta.x, pixelSize * size);
+        rectT = this.GetComponent<RectTransform>();
+        rectT.position = position;
+
 
         for (int i = 0; i < size; i++)
         {
@@ -36,8 +34,8 @@ public class PopUp : MonoBehaviour {
             tiquette.init(pixelSize, i, (int)fontSize, delegate { ClickOn(value); }, interactions[i]);
             etiquettes.Add(tiquette);
         }
-        
     }
+
 
     void ClickOn(int indexHere)
     {
