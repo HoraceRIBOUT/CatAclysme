@@ -75,10 +75,24 @@ public class UI_Holder : MonoBehaviour {
 
 
 
+    public void Click()
+    {
+        GetComponent<Animator>().SetTrigger("Click");
+        EndOfMusic();
+        Invoke("EndOfIntro", 1.5f);
+        //EndOfIntro();
+    }
 
+    void EndOfMusic()
+    {
+        GameManager.Instance.sonMaster.ChangeMusique((int)Utils.MusiqueName.Auberge, 1f);
+    }
 
     void EndOfIntro()
     {
         GameManager.Instance.scenario.EndOfIntro();
     }
+
+
+
 }

@@ -4,14 +4,16 @@ using System.Collections;
 public class EnumUtils : MonoBehaviour {
  
  public enum textAvailable { 
-      Test01,
-      WholeWithPose,
-      Ruelle_yeah,
-      FirstWhole,
-      nop,
-      yeah,
-      Chambre_Grattoir_fouiller,
-      Chambre_Grattoir_nop,
+      Intro,
+      Chatladin_noClue,
+      Chatmallow_Dial,
+      Chatmallow_Item_Recette,
+      Chatmallow_noRecette,
+      Chatmallow_PostRecette,
+      PickUp_Item_Recette,
+      Chatmallow_NoRecette,
+      Porte_Etage,
+      Porte_GrdSalle,
  } 
  
  
@@ -20,9 +22,9 @@ public class EnumUtils : MonoBehaviour {
        string res =  enumGiven.ToString().Replace("_", "/");
        return res+".txt"; 
      }
+ 
      public static textAvailable ChangeToEnum(string s)
      {
-         return (textAvailable)System.Enum.Parse(typeof(textAvailable), s);
+     return (textAvailable)System.Enum.Parse(typeof(textAvailable), s);
      }
-
 }

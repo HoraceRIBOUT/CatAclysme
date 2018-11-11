@@ -14,7 +14,7 @@ public class Scenario : MonoBehaviour {
 
 
     [Header("CSV reading")]
-    public bool readingCSV = false;
+    public bool readingCSV = true;
     public bool waitingForClick = false;
 
     public EnumUtils.textAvailable pathOfNextCSV;
@@ -35,7 +35,6 @@ public class Scenario : MonoBehaviour {
 
     public void EndOfIntro()
     {
-        GameManager.Instance.sonMaster.ChangeMusique((int)Utils.MusiqueName.Auberge, 1.5f);
         if (!GameManager.Instance._FEBUG_dont_start_with_startCVS)
         {
             if ((int)pathOfNextCSV == 0)
@@ -51,6 +50,7 @@ public class Scenario : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 waitingForClick = false;
+                GameManager.Instance.sonMaster.JoueBruitage((int)Utils.BruitageName.Clique, false);
                 displayNextStep();
             }
         }
@@ -201,7 +201,7 @@ public class Scenario : MonoBehaviour {
         TreatCSV();
     }
 
-
+    //NOPE
     private void DisplayAnimation(Step giveStep)
     {
 
@@ -211,7 +211,7 @@ public class Scenario : MonoBehaviour {
     private void DisplayBruitage(Step giveStep)
     {
         int indexOfMusique = (int)Utils.stringToBruitageName(giveStep.get(1));
-        bool random = giveStep.get(2) == "TRUE";
+        bool random = (giveStep.get(2) == "TRUE");
         GameManager.Instance.sonMaster.JoueBruitage(indexOfMusique, random);
         displayNextStep();
     }
@@ -228,15 +228,40 @@ public class Scenario : MonoBehaviour {
         displayNextStep();
     }
 
+    public Animator animatorCanvas;
+    public Room currentRoom = null;
+    public Room nextRoom = null;
     private void DisplaySalle(Step giveStep)
     {
+        //thrfbhgfgh
+        animatorCanvas.SetTrigger("Transition");
 
+        string roomID = giveStep.get(1); 
+        foreach (Room r in rooms)
+        {
+            if (r.id == roomID)
+            {
+                nextRoom = r;
+            }
+        }
+        Invoke("ChangeRoom", 1f);
+        Invoke("FollowTransition", 2f);
+    }
+
+    private void ChangeRoom()
+    {
+        currentRoom.gameObject.SetActive(false);
+        currentRoom = nextRoom;
+        currentRoom.gameObject.SetActive(true);
+    }
+    private void FollowTransition()
+    {
         displayNextStep();
     }
 
+    //Nope
     private void DisplayDecor(Step giveStep)
     {
-
         displayNextStep();
     }
 
@@ -268,7 +293,7 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayZone(Step giveStep)
     {
-        //TO DO
+        DesactiveZoneDansRoom(giveStep.get(1), giveStep.get(2), giveStep.get(3)=="TRUE");
         displayNextStep();
     }
 
@@ -278,15 +303,31 @@ public class Scenario : MonoBehaviour {
         displayNextStep();
     }
 
+    private void DesactiveZoneDansRoom(string roomID, string zoneID, bool value)
+    {
+        foreach (Room r in rooms)
+        {
+            if(r.id == roomID)
+            {
+                r.setActiveZone(zoneID, value);
+                return;
+            }
+
+        }
+    }
+
 
     private void DisplayAddItem(Step giveStep)
     {
         inventaire.Add(giveStep.get(1));
+        GameManager.Instance.sonMaster.JoueBruitage((int)Utils.BruitageName.Jingle, false);
+        displayNextStep();
     }
 
     private void DisplayRemoveItem(Step giveStep)
     {
         inventaire.Remove(giveStep.get(1));
+        displayNextStep();
     }
 
 

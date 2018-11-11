@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour {
 
+    public string id;
     public List<Zone> zones = new List<Zone>();
 
     // Use this for initialization
@@ -17,6 +18,18 @@ public class Room : MonoBehaviour {
             }
         }
 #endif
+    }
+
+
+    public void setActiveZone(string zoneID, bool b)
+    {
+        foreach (Zone z in zones)
+        {
+            if(z.id == zoneID)
+            {
+                z.gameObject.SetActive(b);
+            }
+        }
     }
 	
 }

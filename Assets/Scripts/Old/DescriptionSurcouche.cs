@@ -9,7 +9,7 @@ public class DescriptionSurcouche : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        desc.fontSize = (int)(((float)rectTransform.rect.height / 3))-2;
+        desc.fontSize = (int)(((float)rectTransform.rect.height / 4));
         //desc.fontSize *= 2;
     }
 	

@@ -1,0 +1,10 @@
+﻿Brui	MiaouNeko	TRUE			-firstLine-
+Dial	Nekomancien	Je suis persuadé que c'est toi qui est derrière tout ça maudit Berzerkatze !	5	L	
+Brui	MiaouBers	TRUE			
+Dial	Berzerkatze	Chat va pas la tête de m'accuser ainzi !	8	L	
+Dial	Berzerkatze	Il va falloir passer la crise d'adolezence.	8	L	
+Brui	MiaouNeko	TRUE			
+Dial	Nekomancien	Venant d'une brute comme toi ça me fait rire... Tu me serais plus utile mort.	5	L	
+Brui	MiaouBers	TRUE			
+Dial	Berzerkatze	Wie ?! Si j'avais ma moust-Hache je t'aurai coupé là tête !	8	L	
+Dial	Vous	Bon, je n'obtiendrais aucune information de leur part pour le moment.	3	L	

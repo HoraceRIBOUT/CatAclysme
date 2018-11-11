@@ -1,0 +1,3 @@
+﻿Brui	MiaouLadi	TRUE		
+Dial	Chatladin	Je n'ai pas soif petite créature.	6	L
+Dial	Vous	(Ça va être dur de lui délié la langue)	1	L

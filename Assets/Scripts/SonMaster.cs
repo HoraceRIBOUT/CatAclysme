@@ -14,15 +14,17 @@ public class SonMaster : MonoBehaviour {
 
     public float speedDownUp = 5;
 
+    private float maxVol = 0.7f;
+
     public void ChangeMusique(int i, float delay)
     {
         if(musiques[i] != currentMusique)
         {
             //launch co routine pour diminuer volume
-            if (currentMusique != null) 
-                StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp, 0));
+            if (currentMusique != null)
+                StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp , 0));
             currentMusique = musiques[i];
-            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 0.5f, delay));
+            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, maxVol, delay));
         }
 
     }
@@ -61,6 +63,13 @@ public class SonMaster : MonoBehaviour {
             }
         }
         PlaySOundList(clips[bruitageIndex].auClip, reS);
+
+        if(bruitageIndex == 2 /*Jingle bells*/)
+        {
+            StartCoroutine(diminitionSoundMusic(currentMusique, 10, maxVol*0.33f));
+            StartCoroutine(augmentatSoundMusic(currentMusique, 10, maxVol, 3f));
+        }
+
     }
 
 

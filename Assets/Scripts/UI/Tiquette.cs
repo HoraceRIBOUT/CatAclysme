@@ -20,6 +20,7 @@ public class Tiquette : MonoBehaviour {
         rectT.localScale = scaleRot;
         textT.text = interact.id;
         textT.fontSize = fontSize;
+        buttT.onClick.RemoveAllListeners();
         buttT.onClick.AddListener(action);
         inter = interact;
     }

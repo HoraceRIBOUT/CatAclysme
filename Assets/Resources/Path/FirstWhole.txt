@@ -1,2 +1,0 @@
-﻿Dial	Moi	Eh ca roule ma poule	0
-Cond	dino	yeah	nop

@@ -1,0 +1,6 @@
+﻿Brui	MaiouMalo	TRUE		
+Dial	Chatmallow	Miaouuu..Alors mon p'tit gars tu te charges de l'enquête ?	7	L
+Dial	Vous	Oui, je cherche des informations sur ce qui s'est passé cette nuit.	1	L
+Brui	MaiouMalo	VRAI		
+Dial	Chatmallow	Je ne peux pas t'aider, j'ai dormis comme un loire, bon courage p'tit gars !	7	L
+Dial	Vous	(Pourtant il n'a pas là tête d'un chat qui à fait ses 16h de sommeil)	3	L
