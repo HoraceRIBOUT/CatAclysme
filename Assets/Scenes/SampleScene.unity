@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 300953980}
   - component: {fileID: 300953979}
   m_Layer: 0
-  m_Name: Colonne (1)
+  m_Name: Colonne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,32 +229,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83e7438db2d2aa4a96964bb83a29c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: Dino
   halo: {fileID: 0}
   interactions:
   - id: Mange le dino
-    verbeOuItem: 0
+    item: 0
     pathToFollow: yeah
+    active: 0
   - id: Voler
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 1
   - id: Liberer
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 0
   - id: Lire
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 1
   - id: Chanter
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 0
   - id: Souffler
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 0
   - id: Transcender
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 1
   - id: Tomber sur
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 0
 --- !u!60 &300953980
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -566,20 +575,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83e7438db2d2aa4a96964bb83a29c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: Rond
   halo: {fileID: 0}
   interactions:
   - id: Attraper
-    verbeOuItem: 0
+    item: 0
     pathToFollow: FirstWhole
+    active: 1
   - id: Liberer
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 1
   - id: Parchemin
-    verbeOuItem: 1
+    item: 0
     pathToFollow: WholeWithPose
+    active: 1
   - id: Pose
-    verbeOuItem: 1
+    item: 0
     pathToFollow: Test01
+    active: 1
 --- !u!1 &760107021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,14 +1181,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83e7438db2d2aa4a96964bb83a29c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: Colonne
   halo: {fileID: 0}
   interactions:
   - id: Accepte
-    verbeOuItem: 0
+    item: 0
     pathToFollow: yeah
+    active: 1
   - id: Refuse
-    verbeOuItem: 0
+    item: 0
     pathToFollow: nop
+    active: 1
 --- !u!1 &1611460070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850675319}
+  - component: {fileID: 1850675320}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -1483,6 +1501,21 @@ Transform:
   m_Father: {fileID: 1999373154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850675320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850675318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fadeda11e2efc49a7017d6983e258a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zones:
+  - {fileID: 569822303}
+  - {fileID: 1579882733}
+  - {fileID: 300953979}
 --- !u!1 &1874422535
 GameObject:
   m_ObjectHideFlags: 0
