@@ -1,7 +1,7 @@
 ﻿Dial	Berserkate	Ce test marche	1	L	-firstLine-	
 musi	Auberge
 Desc	Kally mange				
-Brui				
+Brui	MaiouMalo	TRUE			
 Desc	iMerge merge	
 Anim		
 Desc	JusDeFruit juge	

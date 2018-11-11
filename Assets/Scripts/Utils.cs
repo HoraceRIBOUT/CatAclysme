@@ -95,7 +95,13 @@ public class Utils : MonoBehaviour {
     public enum BruitageName
     {
         Marche,
-
+        Clique,
+        Jingle,
+        MiaouNinc,
+        MiaouNeko,
+        MiaouLadi,
+        MiaouBers,
+        MaiouMalo,
     }
 
     public static BruitageName stringToBruitageName(string s)

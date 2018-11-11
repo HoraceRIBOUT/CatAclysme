@@ -20,7 +20,7 @@ public class DescAndDial : MonoBehaviour {
     {
         gameObject.SetActive(true);
         textDesc.gameObject.SetActive(true);
-        nameTalker.gameObject.SetActive(false);
+        //nameTalker.gameObject.SetActive(false);
         portrait.gameObject.SetActive(false);
         nameTalker.text = "";
         textDesc.text = giveStep.grid[1, giveStep.y];
@@ -31,7 +31,7 @@ public class DescAndDial : MonoBehaviour {
     {
         gameObject.SetActive(true);
         textDesc.gameObject.SetActive(true);
-        nameTalker.gameObject.SetActive(true);
+        //nameTalker.gameObject.SetActive(true);
         portrait.gameObject.SetActive(true);
         nameTalker.text = giveStep.grid[1, giveStep.y];
         textDesc.text = giveStep.grid[2, giveStep.y];
@@ -42,7 +42,7 @@ public class DescAndDial : MonoBehaviour {
     {
         gameObject.SetActive(false);
         textDesc.gameObject.SetActive(false);
-        nameTalker.gameObject.SetActive(false);
+        //nameTalker.gameObject.SetActive(false);
         portrait.gameObject.SetActive(false);
     }
 }

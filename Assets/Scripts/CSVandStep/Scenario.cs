@@ -25,7 +25,7 @@ public class Scenario : MonoBehaviour {
     [Header("Progression")]
     public Dictionary<string, bool> dicoBool = new Dictionary<string, bool>();
 
-
+    public List<string> inventaire; 
 
 
     // Use this for initialization
@@ -210,7 +210,9 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayBruitage(Step giveStep)
     {
-
+        int indexOfMusique = (int)Utils.stringToBruitageName(giveStep.get(1));
+        bool random = giveStep.get(2) == "TRUE";
+        GameManager.Instance.sonMaster.JoueBruitage(indexOfMusique, random);
         displayNextStep();
     }
 
@@ -279,12 +281,12 @@ public class Scenario : MonoBehaviour {
 
     private void DisplayAddItem(Step giveStep)
     {
-
+        inventaire.Add(giveStep.get(1));
     }
 
     private void DisplayRemoveItem(Step giveStep)
     {
-
+        inventaire.Remove(giveStep.get(1));
     }
 
 

@@ -3,8 +3,10 @@ Desc	Comment va tu ?
 Desc	Turlututu, chapeau ...?				
 Dial	Huguette	Dans ton cul ?	1	L	
 Anim	L	Dodge			
-Brui	Scratch	TRUE			
-Brui	Take	FALSE			
+Brui	MiaouNinc	TRUE
+Dial	Michel	4 = Nincha + bruitage	4	L	
+Brui	MiaouBers	FALSE	
+Dial	Nope	Chamallow = 6, bruitage Bers	6	L	
 Musi	Suspens				
 Sall	Ruelle	
 Valu	dino	TRUE

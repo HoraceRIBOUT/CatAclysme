@@ -5,7 +5,12 @@ using UnityEngine;
 public class SonMaster : MonoBehaviour {
 
     public List<AudioSource> musiques = new List<AudioSource>();
-    private AudioSource currentMusique;
+   
+    public AudioSource currentMusique;
+
+    public List<AudioSource> bruitageAS = new List<AudioSource>();
+
+    public List<AudioL> clips;
 
     public float speedDownUp = 5;
 
@@ -17,7 +22,7 @@ public class SonMaster : MonoBehaviour {
             if (currentMusique != null) 
                 StartCoroutine(diminitionSoundMusic(currentMusique, speedDownUp, 0));
             currentMusique = musiques[i];
-            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 1, delay));
+            StartCoroutine(augmentatSoundMusic(currentMusique, speedDownUp, 0.5f, delay));
         }
 
     }
@@ -45,7 +50,18 @@ public class SonMaster : MonoBehaviour {
         aS.volume = targetVolume;
     }
 
-
+    public void JoueBruitage(int bruitageIndex, bool random)
+    {
+        AudioSource reS = bruitageAS[0];
+        foreach (AudioSource aS in bruitageAS)
+        {
+            if (!aS.isPlaying)
+            {
+                reS = aS;
+            }
+        }
+        PlaySOundList(clips[bruitageIndex].auClip, reS);
+    }
 
 
     //BRUITAGE : exemple

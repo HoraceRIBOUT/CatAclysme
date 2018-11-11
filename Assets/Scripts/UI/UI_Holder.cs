@@ -66,8 +66,8 @@ public class UI_Holder : MonoBehaviour {
         foreach (Interaction inter in interactions)
         {
             if (inter.active)
-                ///if( inter.item && GameManager.Instance.scenario.inventaire.Contains()*/
-                interactionActive.Add(inter);
+                if(!inter.item || GameManager.Instance.scenario.inventaire.Contains(inter.id))
+                    interactionActive.Add(inter);
         }
 
         currentPopUp.init(position, interactionActive, pixelSize, fontSize, halfSize);
