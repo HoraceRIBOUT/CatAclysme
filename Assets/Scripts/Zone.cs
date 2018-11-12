@@ -10,18 +10,47 @@ public class Zone : MonoBehaviour {
 
     public List<Interaction> interactions = new List<Interaction>();
 
-    void OnMouseOver()
+
+    public bool ULTRAENDDONTTOUCHIT = false;
+
+    public bool alreadyPressOnce = false;
+
+    private void OnMouseEnter()
     {
-        //halo.SetActive(true);
+        GameManager.Instance.scenario.nbrZoneSous++;
     }
 
-    private void OnMouseDown()
+    private void OnMouseExit()
     {
-        if (GameManager.Instance.scenario.currentZone != this && !GameManager.Instance.scenario.readingCSV)
+        GameManager.Instance.scenario.nbrZoneSous--;
+    }
+
+
+    private void OnMouseUp()
+    {
+        if (GameManager.Instance.scenario.currentZone != this && !GameManager.Instance.scenario.readingCSV && !alreadyPressOnce)
+        {
+            alreadyPressOnce = true;
+            print("Call call call "+this.name + " ---" + this.id);
+            StartCoroutine(waitForEnd());
+        }
+
+
+        if (ULTRAENDDONTTOUCHIT)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+    }
+
+    IEnumerator waitForEnd()
+    {
+        yield return new WaitForEndOfFrame();
+        if (!GameManager.Instance.scenario.readingCSV)
         {
             GameManager.Instance.scenario.currentZone = this;
             GameManager.Instance.ui_holder.OpenPopUp(Input.mousePosition, interactions);
         }
-
+        alreadyPressOnce = false;
     }
+
 }

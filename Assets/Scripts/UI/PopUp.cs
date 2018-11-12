@@ -73,7 +73,6 @@ public class PopUp : MonoBehaviour {
     {
         CleanEtiquettes();
         rectParent.sizeDelta = new Vector2(rectParent.sizeDelta.x, 0);
-        print("Lol ça close mais 0, c'est pas assez lol");
 
         GameManager.Instance.scenario.currentZone = null;
     }

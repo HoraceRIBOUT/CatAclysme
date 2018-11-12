@@ -12,7 +12,7 @@ public class EnumUtils : MonoBehaviour {
       Chaladin_noClue,
       Chatmallow_Dial,
       Chatmallow_Item_Recette,
-      Chatmallow_noRecette,
+      Chatmallow_NoRecette,
       Chatmallow_PostRecette,
       Gouttiere_Dial,
       Gouttiere_Item_Snack,
@@ -59,6 +59,10 @@ public class EnumUtils : MonoBehaviour {
  
      public static textAvailable ChangeToEnum(string s)
      {
-     return (textAvailable)System.Enum.Parse(typeof(textAvailable), s);
+        if (s.EndsWith(".txt"))
+        {
+            s = s.Replace(".txt", "");
+        }
+        return (textAvailable)System.Enum.Parse(typeof(textAvailable), s);
      }
 }

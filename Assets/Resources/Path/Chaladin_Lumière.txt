@@ -13,6 +13,7 @@ Brui	MaiouMalo	TRUE
 Dial	Chatmallow	Attendez il à quelquechien à la porte !	7	L
 Brui	MiaouHero	TRUE		
 Dial	Vous	Quoi ! Un Magichien ! Et il a le bâton dans la gueule  !	1	L
+Zone	Grandesalle	Sceptre		TRUE
 Brui	MiaouNeko	TRUE		
 Dial	Neko	Le bâton ! Comme tout droit revenu des enfers !	5	L
 Brui	MiaouBers	TRUE		
@@ -23,6 +24,6 @@ Brui	MiaouNinc	TRUE
 Dial	NinChat	Oh gros ... Nos prières ont été exaucées miaaaaou... 	4	L
 Brui	MiaouLadi	TRUE		
 Dial	Chaladin	Mes prières !	6	L
-	MiaouHero	TRUE		
-	Vous	Et bien voilà une histoire qui retombe sur ses pattes !	1	L
-	Sall	Fin		
+MiaouHero	TRUE		
+Dial	Vous	Et bien voilà une histoire qui retombe sur ses pattes !	1	L
+Sall	Fin		

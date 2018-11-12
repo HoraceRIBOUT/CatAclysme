@@ -24,6 +24,7 @@ public class Scenario : MonoBehaviour {
 
     [Header("Progression")]
     public Dictionary<string, bool> dicoBool = new Dictionary<string, bool>();
+    public List<string> _debug_NameCond = new List<string>();
 
     public List<string> inventaire; 
 
@@ -42,7 +43,9 @@ public class Scenario : MonoBehaviour {
             TreatCSV();
         }
     }
-	
+
+    public int nbrZoneSous = 0;
+    public GameObject mouseMouse;
 	// Update is called once per frame
 	void Update () {
         if (waitingForClick)
@@ -54,7 +57,24 @@ public class Scenario : MonoBehaviour {
                 displayNextStep();
             }
         }
-	}
+
+        Vector3 mousePos = GameManager.Instance.cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z += 2f;
+        mouseMouse.transform.position = mousePos;
+
+        MouseOnSomething();
+
+    }
+    
+    public void MouseOnSomething()
+    {
+        ///test si something sous la souris. Si oui : 
+        ///
+        if (nbrZoneSous < 0)
+            nbrZoneSous = 0;
+        mouseMouse.GetComponent<Animator>().SetBool("Something", nbrZoneSous!=0);
+    }
+
 
     private void TreatCSV()
     {
@@ -83,6 +103,7 @@ public class Scenario : MonoBehaviour {
             currentStepList.Add(bufferStep);
         }
         readingCSV = true;
+        nbrZoneSous = 0;
         displayNextStep();
     }
 
@@ -233,7 +254,6 @@ public class Scenario : MonoBehaviour {
     public Room nextRoom = null;
     private void DisplaySalle(Step giveStep)
     {
-        //thrfbhgfgh
         animatorCanvas.SetTrigger("Transition");
 
         string roomID = giveStep.get(1); 
@@ -244,6 +264,7 @@ public class Scenario : MonoBehaviour {
                 nextRoom = r;
             }
         }
+        nbrZoneSous = 0;
         Invoke("ChangeRoom", 1f);
         Invoke("FollowTransition", 2f);
     }
@@ -270,7 +291,10 @@ public class Scenario : MonoBehaviour {
         string value = giveStep.get(1);
         bool key = giveStep.get(2) == "TRUE";
         if (dicoBool.ContainsKey(value))
+        {
             dicoBool[value] = key;
+            _debug_NameCond.Add(value+key);
+        }
         else
             dicoBool.Add(value, key);
         displayNextStep();
@@ -281,6 +305,7 @@ public class Scenario : MonoBehaviour {
         string index = giveStep.get(1);
         bool res;
         /*res = */dicoBool.TryGetValue(index, out res);
+        Debug.Log("Cond is on : " + index);
         if (res)
         {
             ExecutePath(EnumUtils.ChangeToEnum(giveStep.get(2)));

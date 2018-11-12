@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
     public Scenario scenario;
     public SonMaster sonMaster;
 
+    public Camera cam;
+
     
     
     // Use this for initialization

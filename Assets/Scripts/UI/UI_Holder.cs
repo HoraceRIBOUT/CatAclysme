@@ -74,13 +74,16 @@ public class UI_Holder : MonoBehaviour {
     }
 
 
-
+    bool firstClickEver = true;
     public void Click()
     {
-        GetComponent<Animator>().SetTrigger("Click");
-        EndOfMusic();
-        Invoke("EndOfIntro", 1.5f);
-        //EndOfIntro();
+
+        if (firstClickEver)
+        {
+            GetComponent<Animator>().SetTrigger("Click");
+            EndOfMusic();
+            Invoke("EndOfIntro", 1.5f);
+        }
     }
 
     void EndOfMusic()
@@ -91,6 +94,7 @@ public class UI_Holder : MonoBehaviour {
     void EndOfIntro()
     {
         GameManager.Instance.scenario.EndOfIntro();
+        firstClickEver = false;
     }
 
 

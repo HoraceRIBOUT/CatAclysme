@@ -1,2 +1,2 @@
-Sall	Chambre	
 Brui	Marche	FALSE
+Sall	Chambre

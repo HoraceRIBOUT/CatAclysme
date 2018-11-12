@@ -1,2 +1,2 @@
-﻿Sall	GrandeSalle	
-Brui	Marche	FALSE
+﻿Brui	Marche	FALSE
+Sall	GrandeSalle	

@@ -1,2 +1,2 @@
-﻿Sall	Couloir	
-Brui	Marche	FALSE
+﻿Brui	Marche	FALSE
+Sall	Couloir	
