@@ -4,4 +4,5 @@ Dial	Chatmallow	Vois-tu mon p'tit j'ai trouvé le Royal Félin dans la chambre a
 Dial	Chatmallow	Je me suis donc précipité dans la cuisine pour le remplir de nouveaux snacks puis je l'ai tout simplement reposé là où je l'avais trouvé.	7	L
 Dial	Chatmallow	Mais je ne pensais pas qu'il allait disparaître...	7	L
 Valu	PostRecette	TRUE		
-Addi	Clef Suite Meow			
+Addi	Clef			
+Dial	Chatmallow	Tiens prends cette clé elle ouvre la porte de la suite !	7	L

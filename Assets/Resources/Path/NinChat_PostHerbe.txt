@@ -1,0 +1,4 @@
+﻿Brui	MiaouNinc	TRUE		
+Dial	NinChat	Miaaaaaaou, merci man, et n'oublie pas la lumière.	4	L
+Brui	MiaouHero	TRUE		
+Dial	Vous	(C'est quoi ce chatrabia, lui il est vraiment perché..)	1	L

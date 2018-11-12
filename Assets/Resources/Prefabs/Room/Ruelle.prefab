@@ -325,7 +325,7 @@ MonoBehaviour:
   interactions:
   - id: Aller
     item: 0
-    pathToFollow: 2
+    pathToFollow: 35
     active: 1
 --- !u!114 &114869700445309104
 MonoBehaviour:
@@ -343,7 +343,11 @@ MonoBehaviour:
   interactions:
   - id: Parler
     item: 0
-    pathToFollow: 2
+    pathToFollow: 10
+    active: 1
+  - id: Snack
+    item: 1
+    pathToFollow: 11
     active: 1
 --- !u!114 &114927734220774456
 MonoBehaviour:
@@ -358,7 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Ruelle
   zones:
-  - {fileID: 0}
+  - {fileID: 114323397998791492}
   - {fileID: 114869700445309104}
 --- !u!212 &212192647640738542
 SpriteRenderer:

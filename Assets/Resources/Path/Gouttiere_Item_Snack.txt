@@ -1,0 +1,8 @@
+﻿Brui	MiaouGout	TRUE		
+Dial	Gouttiere	Oh oui donne moi ça !	9	L
+Brui	MiaouHero	TRUE		
+Dial	Vous	Un instant, vous m'aviez promis quelque chose en échange !	1	L
+Brui	MiaouGout	TRUE		
+Dial	Gouttiere	Ouais ouais... Tiens prends ça, ça calmerais même un humain en colère...	9	L
+Valu	PostSnack	TRUE		
+Addi	Herbe à chat			

@@ -1,0 +1,14 @@
+﻿Brui	MiaouBers	TRUE		
+Dial	BZK	Oui, z'est bien ma Moust-Hache !	8	L
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Je le savais, t'es qu'un sale voleur !	5	L
+Brui	MiaouBers	TRUE		
+Dial	BZK	Ze n'est pas ze que vous croyez !	8	L
+Dial	BZK	Hier zoir j'ai trouvé le cadeau du Roi par terre	8	L
+Dial	BZK	J'ai donc décidé de le remettre a za place	8	L
+Dial	BZK	Mais ma Moust-Hache n'a pas réussi a ouvrir le kasten !	8	L
+Valu	bzkHappy	TRUE		
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Oh !	5	L
+Brui	MiaouBers	TRUE		
+Dial	BZK	Petit, zi tu as bezoin d'aide je zui la !	8	L

@@ -1,2 +1,4 @@
-﻿Dial	Vous	(On dirait... Une recette de cuisine)	2	L
+﻿Brui	MiaouHero	TRUE		
+Dial	Vous	(On dirait... Une recette de cuisine)	2	L
 Addi	Recette			
+Zone	GrandeSalle	Recette	FAUX	

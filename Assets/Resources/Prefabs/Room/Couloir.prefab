@@ -606,7 +606,7 @@ MonoBehaviour:
   interactions:
   - id: Descendre
     item: 0
-    pathToFollow: 9
+    pathToFollow: 35
     active: 1
 --- !u!114 &114247428865941236
 MonoBehaviour:
@@ -624,7 +624,11 @@ MonoBehaviour:
   interactions:
   - id: Parler
     item: 0
-    pathToFollow: 2
+    pathToFollow: 19
+    active: 1
+  - id: Herbe
+    item: 1
+    pathToFollow: 20
     active: 1
 --- !u!114 &114357965949204232
 MonoBehaviour:
@@ -641,6 +645,9 @@ MonoBehaviour:
   zones:
   - {fileID: 114623047748964766}
   - {fileID: 114247428865941236}
+  - {fileID: 114886394673828156}
+  - {fileID: 114590405719013936}
+  - {fileID: 114157705523431304}
 --- !u!114 &114590405719013936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -654,7 +661,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Snack
   halo: {fileID: 0}
-  interactions: []
+  interactions:
+  - id: Prendre
+    item: 0
+    pathToFollow: 27
+    active: 1
 --- !u!114 &114623047748964766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -683,9 +694,13 @@ MonoBehaviour:
   id: PorteCouloir
   halo: {fileID: 0}
   interactions:
-  - id: Prendre
+  - id: Ouvrir
     item: 0
-    pathToFollow: 2
+    pathToFollow: 32
+    active: 1
+  - id: Clef
+    item: 1
+    pathToFollow: 33
     active: 1
 --- !u!212 &212167420845003966
 SpriteRenderer:

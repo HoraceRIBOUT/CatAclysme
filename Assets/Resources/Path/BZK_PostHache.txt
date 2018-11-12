@@ -1,0 +1,3 @@
+﻿Brui	MiaouBers	TRUE		
+Dial	BZK	Merzi de mettre en lumiere la verite petit !	8	L
+Dial	BZK	Zi tu as bezoin d'aide, je zuis là !	8	L

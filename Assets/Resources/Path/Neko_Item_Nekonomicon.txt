@@ -1,0 +1,10 @@
+﻿Brui	MiaouNeko	TRUE		
+Dial	Neko	Oh rends moi mon bouquin ! J'ai des trucs persos dedans !	5	L
+Dial	Neko	Bon ok... je vais te raconter ce qu'il s'est passé..	5	L
+Dial	Neko	Quand je suis arrivé dans la chambre le coffre était ouvert. 	5	L
+Dial	Neko	J'ai pris le baton et j'ai commencé à dévorer les snacks qu'il contenait ...	5	L
+Brui	MiaouBers	TRUE		
+Dial	BZK	Achh ! Fichu kleiner Schnurrbart ! Che le chavait !	8	L
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Non je n'ai rien fait ! Je me suis endormi avec le baton et à mon reveil il n'était plus là...	5	L
+Valu	NekoHappy	TRUE		

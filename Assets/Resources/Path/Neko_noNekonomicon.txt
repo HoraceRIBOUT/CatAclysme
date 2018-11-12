@@ -1,0 +1,3 @@
+﻿Brui	MiaouNeko	TRUE		
+Dial	Neko	Grosse brute écervelée, mes serviteurs des enfers te battraient haut la patte aux échecs. 	5	L
+Dial	Neko	Quoi ? Non je ne veux pas boire je préfère rester déshydraté, ça fait resortir le neige de mon pelage.	5	L

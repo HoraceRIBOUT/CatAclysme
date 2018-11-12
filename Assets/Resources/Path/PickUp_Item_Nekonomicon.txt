@@ -1,0 +1,4 @@
+﻿Brui	MiaouHero	TRUE		
+Dial	Vous	(Je crois que ça appartient à quelqu'un !)	2	L
+Addi	Nekonomicon			
+Zone	Chambre	Nekonomicon	FAUX	

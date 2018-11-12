@@ -1,0 +1,6 @@
+﻿Brui	MiaouNinc	TRUE		
+Dial	NinChat	La lumière... Je l'ai vue... Je la retrouverai... 	4	L
+Brui	MiaouNinc	TRUE		
+Brui	MiaouHero	TRUE		
+Dial	Vous	(C'est quoi ce chatrabia, lui il est vraiment perché..)	3	L
+Brui	MiaouNinc	TRUE		

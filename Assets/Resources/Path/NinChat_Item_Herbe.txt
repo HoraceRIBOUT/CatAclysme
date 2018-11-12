@@ -1,0 +1,9 @@
+﻿Brui	MiaouNinc	TRUE		
+Dial	NinChat	Oh je me sens plus .. Calme.. Je coirs que mes chatkra sont finalement ouvert..	4	L
+Dial	NinChat	Je dois t'avouer un truc gros.. Cette nuit j'ai ouvert le coffre pour prendre le baton..	4	L
+Dial	NinChat	Et là, je l'ai vue, sortie des ténèbres, la lumière rouge !	4	L
+Dial	NinChat	Je l'ai traquée à travers l'obscurité toute la nuit, jusqu'à l'épuisement...	4	L
+Dial	NinChat	Mais je crois me souvenir, sortant de l'ombre le poil soyeux, que le Chaladin a vaincu la bête.	4	L
+Addi	Lumiere			
+Brui	MiaouHero	TRUE		
+Dial	Vous	(Le Chaladin ? Je crois que j'ai trouvé quelque chose qui va lui délier la langue)	1	L

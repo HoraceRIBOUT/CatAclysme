@@ -1,0 +1,3 @@
+﻿Brui	MiaouGout	TRUE		
+Dial	Gouttiere	Oumia, petit j'ai la meilleur herbe à chat du royaume !	9	L
+Dial	Gouttiere	Parcontre je fais pas dans la chat-rité il va falloir quelque chose en échange.	9	L

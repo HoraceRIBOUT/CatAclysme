@@ -1,0 +1,8 @@
+Brui	MiaouHero	TRUE		
+Dial	Vous	(Comment l'ouvrir ?)	1	L
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Tu as besoin d'un coup de main ?	5	L
+Brui	MiaouBers	TRUE		
+Dial	Bzk	Ah nous deux on devrait pouvoir l'ouvrir	8	L
+Valu	PorteOuverte	TRUE		
+Sall	Ruelle			

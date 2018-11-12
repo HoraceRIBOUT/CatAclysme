@@ -1,0 +1,4 @@
+﻿Brui	MiaouHero	TRUE		
+Dial	Vous	(Ca pourrait servir.. Il faut dire que je suis plutôt court sur pattes...)	2	L
+Addi	Tabouret			
+Zone	GrandeSalle	Tabouret	FAUX	

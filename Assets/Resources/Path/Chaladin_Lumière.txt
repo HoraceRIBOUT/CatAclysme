@@ -1,0 +1,28 @@
+﻿Brui	MiaouHero	TRUE		
+Dial	Vous	Chaladin, avez vous quelque chose à nous dire à propos d'une lumière rouge ?	1	L
+Brui	MiaouLadi	TRUE		
+Dial	Chatladin	Ah.. Ce chapardeur de Ninchat a finalement reprit ses esprits.	6	L
+Dial	Chatladin	Le baton ? Je l'ai envoyé au loin en direction du royaume des chiens !	6	L
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Comment toi Chaladin ? Mais par quel diable as tu pu ? 	5	L
+Brui	MiaouBers	TRUE		
+Dial	BZK	Toi Chaladin ?  Warum ?	8	L
+Brui	MiaouLadi	TRUE		
+Dial	Chaladin	Le bâton n'était plus à la hauteur de notre grand roi. Votre indiscipline et votre maladresse ont entrainé sa détérioration irréversible.	6	L
+Brui	MaiouMalo	TRUE		
+Dial	Chatmallow	Attendez il à quelquechien à la porte !	7	L
+Brui	MiaouHero	TRUE		
+Dial	Vous	Quoi ! Un Magichien ! Et il a le bâton dans la gueule  !	1	L
+Brui	MiaouNeko	TRUE		
+Dial	Neko	Le bâton ! Comme tout droit revenu des enfers !	5	L
+Brui	MiaouBers	TRUE		
+Dial	BZK	Et en un zeul morzeau !	8	L
+Brui	MaiouMalo	TRUE		
+Dial	Chatmallow	Les magichiens ont dû le restaurer !	7	L
+Brui	MiaouNinc	TRUE		
+Dial	NinChat	Oh gros ... Nos prières ont été exaucées miaaaaou... 	4	L
+Brui	MiaouLadi	TRUE		
+Dial	Chaladin	Mes prières !	6	L
+	MiaouHero	TRUE		
+	Vous	Et bien voilà une histoire qui retombe sur ses pattes !	1	L
+	Sall	Fin		

@@ -1,0 +1,5 @@
+﻿Brui	MiaouHero	TRUE		
+Dial	Vous	(Oh ! Ca à l'air délicieux !)	2	L
+Dial	Vous	(Non ça pourrait m'être utile...)	1	L
+Addi	Snack			
+Zone	Couloir	Snack	FAUX	

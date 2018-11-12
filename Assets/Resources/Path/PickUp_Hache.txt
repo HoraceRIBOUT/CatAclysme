@@ -1,0 +1,4 @@
+Brui	MiaouHero	TRUE		
+Dial	Vous	Hmm... Mais ! C'est la Moust-Hache du Berzerkatze	2	L
+Addi	MoustHache			
+Zone	Chambre	MoustHache	FAUX	

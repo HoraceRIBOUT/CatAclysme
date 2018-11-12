@@ -1,0 +1,1 @@
+Cond	PostHerbe	NinChat_PostHerbe	NinChat_NoHerbe

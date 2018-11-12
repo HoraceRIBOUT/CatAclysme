@@ -1,0 +1,4 @@
+Brui	MiaouHero	TRUE		
+Dial	Vous	(On dirait... Une recette de cuisine)	2	L
+Addi	Nekonomicon			
+Zone	Chambre	Nekonomicon	FAUX	
